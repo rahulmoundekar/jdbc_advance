@@ -138,6 +138,7 @@ ODBC : open database connectivity
 	5} connection close
 ----------------------------------------------		
 download mysql connector.jar  file
+https://mvnrepository.com/artifact/mysql/mysql-connector-java/8.0.16
 ----------------------------------------------
 Statement
  -Query exection
