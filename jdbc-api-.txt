@@ -108,13 +108,16 @@ ODBC : open database connectivity
 			-jdbc-odbc driver---native lib+software installion
 			-native driver--client--server
 			-network driver--LAN connection
-			-thin driver : client side work--no need to config server
+	mysql-connector-8.X.X		-thin driver : client side work--no need to config server
 --------------------------------------------------
 5 step :
 	
 	1} load driver--mysql
 		
-	Class.forName("com.mysql.cj.jdbc.Driver");
+	Class c=Class.forName("com.mysql.cj.jdbc.Driver");
+	Driver d=(Driver)c.newInstance(); dynamic object creation
+
+	A a=new A(); static object
 
 	2} to connect with database : connection established
 		Connection con=DriverManager.getConnection(url, username, password);
@@ -127,12 +130,30 @@ ODBC : open database connectivity
 		PreparedStatement-faster--runtime inputs
 		CallableStatement-----procedure, precompile query-faster
 			
-	4} boolean =execute()--c,insert, drop
+	4} prepared queries 
+	boolean =execute()--c,insert, drop
 		int =executeUpdate()--insert, update, delete,
 		ResultSet =executeQuery()	-select	
 	 	
 	5} connection close
 ----------------------------------------------		
+download mysql connector.jar  file
+----------------------------------------------
+Statement
+ -Query exection
+ 
+PreparedStatement
+	-parametrized Query	(?-Column-index(1))
+	-batch execution
+	 PreparedStatement ps=con.preparedStatement();
+	 	getter/setter-
+	
+statement	
+	10---student-
+		insert ---10 times excute	
+PS
+	10-student	
+		1-time excute--batch execution
 	
 	
 	
