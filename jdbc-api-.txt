@@ -156,6 +156,28 @@ PS
 	10-student	
 		1-time excute--batch execution
 	
+-----------------------------------------------------------
+
+CallableStatement :    CallableStatement cs=con.preparedCall("{call storedName()}");
+	-pre-compiled queries 
+		-stored procedures 
+			-method or function 
+			-logical operation--any queries-group of statements 
+			-return nothing
+			-secure
+			
+		-function	
+			-logical 
+			-return values
+
+	-we can call stored procedure.
+	-fast than preparedStatement
+
+Stored procedure :
+	IN--SET
+	OUT--GET
+	INOUT-SETGET --SELECT ID from employee where id=id;
+
 	
 	
 
