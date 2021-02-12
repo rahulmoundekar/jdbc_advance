@@ -177,6 +177,92 @@ Stored procedure :
 	IN--SET
 	OUT--GET
 	INOUT-SETGET --SELECT ID from employee where id=id;
+	
+	
+----------------------------------------
+
+RDBMS : relational Database management system :
+
+
+one to one
+	pk--fk--unique
+one to many
+	pk--fk--duplicate
+many to many
+	pk--fk--duplicate
+
+-----------------------------------------
+
+employee 
+id name mobile       email
+1   abc   48584385
+
+address 
+id street city zipcode
+101 a    pune   411052
+102 b   pune 	411014
+
+
+
+
+primary key : it is unique identification key --unique
+forgein key : duplicate // unique
+
+----------------------------------
+one to one :
+
+PK----FK
+unique--FK
+---------------------------------
+-----------------------------------------
+
+employee 
+id name mobile       email
+1   abc   48584385
+
+address 
+id street city zipcode   eid (FK)
+101 a    pune   411052
+102 b   pune 	411014
+
+
+
+create table employee(id int primary key auto_in, name var, mob var);
+
+CREATE TABLE `pancard` (
+  `id` INT NOT NULL,
+  `pancardno` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`),
+    FOREIGN KEY (`id`)
+    REFERENCES `rdmsjoins`.`person` (`id`);
+
+insert into address(street, city, zipcode,eid)values(a,pune,411052,1);
+  
+select * from employee;
+
+join query
+
+join :
+	select * from employee e,address a where e.id=a.eid;
+	
+inner join 
+	select * from employee e inner join/join address a on e.id=a.eid;  	
+	
+left join
+	select * from employee e left join adresss a on e.id=a.eid;
+		
+	
+right join
+
+outer join :
+	mysql does not support this join	
+
+-----------------------------
+ Cannot add or update a child row: a foreign key constraint fails 
+	
+
+
+	
 
 	
 	
