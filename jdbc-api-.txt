@@ -299,6 +299,43 @@ id 		eid_fk   cid_fk
 3		2			1
 4		2			3
 
+-----------------------
+
+Transaction management :  setAutocommit (true)
+	jdbc
+		commit
+		rollback
+success 
+	commit
+failure
+
+---------------------
+	con.setAutocommit(false);
+		con.commit();
+		con.rollback();
+--------------------
+ACID :
+	Atomicity: means either all successful or none
+	Consistency: ensures bringing the database from one consistent state to another consistent state.
+	Isolation: ensures that transaction is isolated from other transaction.
+	Durability: means once a transaction has been committed, it will remain so, even in the event of errors, power loss etc.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 
 
